@@ -53,7 +53,6 @@ namespace SharpRepository.Tests.Integration.Infrastructure
         {
             if(disposing)
             {
-
                 _client.Containers.StopContainerAsync(_containerId, new ContainerStopParameters()).Wait();
                 
                 _client.Containers.RemoveContainerAsync(_containerId, new ContainerRemoveParameters()
@@ -107,7 +106,7 @@ namespace SharpRepository.Tests.Integration.Infrastructure
             return createResponse.ID;
         }
 
-        private void WriteLine(string output)
+        protected void WriteLine(string output)
         {
             OnOutputReceived?.Invoke(this, output);
         }
