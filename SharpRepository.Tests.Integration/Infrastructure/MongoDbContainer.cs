@@ -1,8 +1,9 @@
 ﻿using NUnit.Framework;
 namespace SharpRepository.Tests.Integration.Infrastructure
 {
-    public class MongoDbContainer : ContainerService
+    public class MongoDbContainer : ContainerBase
     {
-        public MongoDbContainer() : base(@"npipe://./pipe/docker_engine", "mongo", "latest", "sr-mongodb", 27017) { }
+        public MongoDbContainer() 
+            : base("mongo", "latest", "sr-mongodb", 27017) { }
     }
 }
