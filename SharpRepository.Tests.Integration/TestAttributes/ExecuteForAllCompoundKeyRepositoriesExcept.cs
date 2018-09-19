@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using SharpRepository.Tests.Integration.Data;
+using SharpRepository.Tests.Integration.Infrastructure;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SharpRepository.Tests.Integration.TestAttributes
 {
-    public class ExecuteForAllCompoundKeyRepositoriesExceptAttribute : TestCaseSourceAttribute
+    public class ExecuteForAllCompoundKeyRepositoriesExceptAttribute : SourceAttribute
     {
         private static IEnumerable<TestCaseData> ForAllCompoundKeyRepositoriesExceptTestCaseData
         {

@@ -1,10 +1,11 @@
-using System.Collections.Generic;
 using NUnit.Framework;
 using SharpRepository.Tests.Integration.Data;
+using SharpRepository.Tests.Integration.Infrastructure;
+using System.Collections.Generic;
 
 namespace SharpRepository.Tests.Integration.TestAttributes
 {
-    public class ExecuteForRepositoriesAttribute : TestCaseSourceAttribute
+    public class ExecuteForRepositoriesAttribute : SourceAttribute
     {
         private static string _testName;
 
